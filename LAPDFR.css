@@ -1,0 +1,190 @@
+/* Globales Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Header passt sich der Logogröße an */
+    text-align: center;
+    position: relative;
+    background-color: transparent; /* Hintergrund ist jetzt transparent */
+    padding-bottom: 20px; /* Platz für die Buttons unten */
+}
+
+header .logo img {
+    width: 100%; /* Logo nimmt die volle Breite des Headers ein */
+    height: auto; /* Automatische Höhe passend zur Breite */
+}
+
+header nav {
+    width: 100%; /* Navigationselemente sollen ebenfalls die volle Breite nutzen */
+    position: absolute;
+    bottom: 0; /* Buttons werden am unteren Rand des Headers angezeigt */
+    left: 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund für die Navigation */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    background-color: #007bff; /* Primärfarbe der Buttons */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px; /* Abgerundete Ecken für Buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #0056b3; /* Hintergrundfarbe beim Hovern */
+    color: #fff; /* Weißer Text bleibt beim Hovern */
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Text in Sektionen zentriert */
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0; /* Padding entfernt für zentrierte Aufzählung */
+}
+
+ul li {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff; /* Primärfarbe der Buttons */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px; /* Abgerundete Ecken für Buttons */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Dunklerer Farbton für Hover-Effekt */
+    transform: scale(1.05); /* Vergrößerung beim Hover */
+}
+
+/* Kontaktformular Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Mobile-first Styling */
+header nav ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+section {
+    padding: 15px;
+}
+
+/* Für größere Bildschirme (Tablets und Desktops) */
+@media(min-width: 768px) {
+    header nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    section {
+        margin: 40px auto;
+        max-width: 800px;
+    }
+
+    .btn {
+        width: auto;
+    }
+}
+
+/* Für noch größere Bildschirme (Desktops) */
+@media(min-width: 1024px) {
+    section {
+        max-width: 1200px;
+    }
+}
